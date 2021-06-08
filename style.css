@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 30px 0 30px 0;
+    padding: 30px 0 20px 0;
     font-size: 50px;
 }
 
@@ -21,7 +21,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    font-size: 40px;
+    font-size: 45px;
 }
 
 div.scoreCard {
@@ -34,12 +34,18 @@ div.scoreCard {
     padding-bottom: 40px;
 }
 
-.playerSelection {
-    font-size: 25px;
+.playerSection {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-.computerSelection {
-    font-size: 25px;
+.computerSection {
+    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 div.buttons {
@@ -56,11 +62,18 @@ div.buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    width: 100px;
+    height: 160px;
+    width: 160px;
+    cursor: pointer;
 }
 
 .fa-hand-rock {
     font-family: "Font Awesome 5 Free";
     font-size: 30px;
 }
+
+@media (max-width: 550px) {
+    html {
+      font-size: 40%;
+    }
+  }
