@@ -1,5 +1,5 @@
 ## **Assignment**
-Your game is going to play against the computer, so begin with a function called `computerPlay` that will randomly return either 'Rock', 'Paper' or 'Scissors'. *We'll use this function in the game to make the computer's play.* 
+Your game is going to play against the computer, so **begin with a function called `computerPlay` that will randomly return either 'Rock', 'Paper' or 'Scissors'.** *We'll use this function in the game to make the computer's play.* 
 
 **Write a function that plays a single round of Rock Paper Scissors. The function should take two parameters - the `playerSelection` and  `computerSelection` - then return a string that declares the winner of the round (e.g. `You Lose! Paper beats Rock` )**
 
@@ -14,4 +14,3 @@ Your game is going to play against the computer, so begin with a function called
 ## **Tasks**
 - [x] done
 - [ ] not done
-- [ ] 

@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Patua One', cursive;
+    background-color: #ffeae6;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 0;
+    font-size: 50px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    font-size: 40px;
+}
+
+div.scoreCard {
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    height: 150px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.playerSelection {
+    font-size: 25px;
+}
+
+.computerSelection {
+    font-size: 25px;
+}
+
+div.buttons {
+    display: flex;
+    justify-content: space-around;
+    max-width: 700px;
+    height: 150px;
+    margin: auto;
+    margin-top: 20px;
+    padding-top: 40px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+}
+
+.fa-hand-rock {
+    font-family: "Font Awesome 5 Free";
+    font-size: 30px;
+}

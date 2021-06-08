@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>ROCK PAPER SCISSORS</header>
+    <h1>"You won!" or "You lost!"</h1>
+    <div class="scoreCard">
+        <div class="playerSelection">
+            <p id="playerScore">Player:</p>
+        </div>
+        <div class="computerSelection">
+        <p id="computerScore">Computer:</p>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" class="btn" id="rock-btn">
+            <i class="far fa-hand-rock" aria-hidden="true">Rock</i>
+        </button>
+        <button type="button" class="btn" id="paper-btn">Paper</button>
+        <button type="button" class="btn" id="scissors-btn">Scissors</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
