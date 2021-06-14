@@ -7,26 +7,38 @@
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7cbf10dcc9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>ROCK PAPER SCISSORS</header>
     <h1>Score</h1>
+
+    <!-- Modal 
+<div class="modal">
+    <div id="result" class="modal-content">
+        <h1>You Win!</h1>
+        </div>
+        --> 
+
     <div class="scoreCard">
         <div class="playerSection">
-            <p id="playerScore">Player:</p>
-            <p id="playerOption">_</p>
+            <p id="playerScore"></p>
+            <p id="playerChoice">_</p>
         </div>
         <div class="computerSection">
-        <p id="computerScore">Computer:</p>
-        <p id="computerOption"></p>
+        <p id="computerScore">Computer: 0</p>
+        <p id="computerChoice">_</p>
         </div>
     </div>
 
-    <div class="buttons">
-        <button type="button" class="btn" id="paper-btn" >Rock</button>
-        <button type="button" class="btn" id="paper-btn">Paper</button>
-        <button type="button" class="btn" id="scissors-btn">Scissors</button>
+    <div class="choices">
+        <i id="rock" class="choice far fa-hand-rock fa-10x"></i>
+        <i id="paper" class="choice far fa-hand-paper fa-10x"></i>
+        <i id="scissors" class="choice far fa-hand-scissors fa-10x"></i>
     </div>
+
+    <button id="restart-btn">New Game</button>
+
     <script src="script.js"></script>
 </body>
 </html>
