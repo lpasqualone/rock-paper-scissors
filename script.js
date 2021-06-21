@@ -1,15 +1,11 @@
 const choices = document.querySelectorAll('.choice');
-const score = document.getElementById('score');
+const scores = document.getElementById('scores');
 const restart = document.getElementById('restart-btn');
+const scoreHeading = document.getElementById('scoreHeading');
 
-const scoreboard = {
-    Player: 0,
-    Computer: 0,
-}
-
-document.getElementById("playerScore").innerHTML = 'Player:' + ' ' + scoreboard.Player
-document.getElementById("computerScore").innerHTML = 'Computer:' + ' ' + scoreboard.Player
-
+// Counter for score
+let playerScore = 0;
+let computerScore = 0;
 
 // Play game
 function playRound(e) {
@@ -18,8 +14,9 @@ function playRound(e) {
     const computerChoice = computerPlay();
     const winner = getWinner(playerChoice, computerChoice);
 
-    console.log(playerChoice, computerChoice, winner, scoreboard)
-}
+    console.log(playerChoice, computerChoice, winner, playerScore, computerScore);
+    console.log(scoreHeading.textContent);
+    }
 
 // Get computer choice
 function computerPlay() {
@@ -29,46 +26,78 @@ function computerPlay() {
 
 // Get game winner
 function getWinner(p, c) {
-    if (p === c) {
+    if (playerScore >= 5 && computerScore < 5) {
+        scoreHeading.textContent = 'Nice! You Win!';
+      } else if (playerScore < 5 && computerScore >= 5) {
+        scoreHeading.textContent = 'Aw bummer, you lose.';
+      }
+      else if (p === c) {
+        scoreHeading.textContent = 'Draw!'
         return 'draw';
     } else if (p === 'rock'){
         if (c === 'paper'){
+            scoreHeading.textContent = 'You lose!'
+            computerScore++;
             return 'computer';
         } else {
+            scoreHeading.textContent = 'You win!'
+            playerScore++;
             return 'player';
         }
     } else if (p === 'paper'){
         if (c === 'scissors'){
+            scoreHeading.textContent = 'You lose!'
+            computerScore++;
             return 'computer';
         } else {
+            scoreHeading.textContent = 'You win!'
+            playerScore++;
             return 'player';
         }
     } else if (p === 'scissors'){
         if (c === 'rock'){
+            scoreHeading.textContent = 'You lose!'
+            computerScore++;
             return 'computer';
         } else {
+            scoreHeading.textContent = 'You win!'
+            playerScore++;
             return 'player';
         }
     }
 }
 
-// Show winner of round
-function showWinner(winner){
-    if(winner === 'player'){
-        // Inc player score
-        scoreboard.Player++;
-    } else if (winner === 'computer'){
-        scoreboard.Computer++;
-    }
+// Show score
+function updateScore() {
+    const playerScorePara = document.getElementById("playerScore");
+    const computerScorePara = document.getElementById("computerScore");
 
-//Show score
-    score.innerHTML = `
-    <p>Player: ${scoreboard.Player}</p>
-    <p>Computer: ${scoreboard.Computer}</p>
-    `;
-
-    document.getElementById("computerChoice").innerHTML = computerPlay();
+    playerScorePara.textContent = `Player: ${playerScore}`;
+    computerScorePara.textContent = `Computer: ${computerScore}`;
 }
 
+// Game over
+function gameOver() {
+    if (playerScore >= 5 && computerScore < 5) {
+        scoreHeading.textContent = 'Nice! You Win!';
+      } else if (playerScore < 5 && computerScore >= 5) {
+        scoreHeading.textContent = 'Aw bummer, you lose.';
+      };
+}
+
+function restartGame() {
+    playerScore = 0;
+    computerScore = 0;
+    updateScore();
+    playRound(event);
+}
+
+
+
 // Event listeners
-choices.forEach(choice => choice.addEventListener('click', playRound));
+choices.forEach(choice => choice.addEventListener('click', (event) => {
+	playRound(event);
+	updateScore();
+    gameOver();
+}));
+restart.addEventListener('click', restartGame);

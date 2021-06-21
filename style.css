@@ -20,18 +20,18 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 40px;
     font-size: 45px;
 }
 
-div.scoreCard {
+div.score {
     display: flex;
     justify-content: space-around;
     max-width: 500px;
     height: 150px;
     margin: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .playerSection {
@@ -75,10 +75,15 @@ div.choices {
     display: none;
     margin: auto;
     height: 50px;
-    width: 120px;
+    width: 150px;
     font-size: 1.1rem;
-    outline: none;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 6px;
     cursor: pointer;
+}
+
+#restart-btn:hover {
+    background-color: #ffc9be;
 }
 
 @media (max-width: 700px) {
