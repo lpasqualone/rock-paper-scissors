@@ -1,5 +1,5 @@
 # Rock Paper Scissors game
-*CURRENTLY IN PROGRESS*<br>
+[Live Demo](https://lpasqualone.github.io/rock-paper-scissors/)👈<br>
 <br>Project from The Odin Project's [curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/rock-paper-scissors): <br> 
 Create a JavaScript program from scratch; a **Rock Paper Scissors** game using HTML, CSS, and Vanilla JS.
 

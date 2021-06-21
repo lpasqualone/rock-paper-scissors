@@ -16,6 +16,12 @@ header {
     font-size: 50px;
 }
 
+@media (max-width: 500px) {
+    header {
+      font-size: 40px;
+    }
+  }
+
 h1 {
     display: flex;
     justify-content: center;
@@ -23,6 +29,12 @@ h1 {
     padding-top: 40px;
     font-size: 45px;
 }
+
+@media (max-width: 500px) {
+    h1 {
+      font-size: 35px;
+    }
+  }
 
 div.score {
     display: flex;
@@ -81,6 +93,24 @@ div.choices {
     border-radius: 6px;
     cursor: pointer;
 }
+
+@media (max-width: 700px) {
+    #restart-btn {
+        margin: auto;
+        height: 40px;
+        width: 120px;
+        font-size: 1rem;
+    }
+  }
+
+@media (max-width: 500px) {
+    #restart-btn {
+        margin: auto;
+        height: 40px;
+        width: 120px;
+        font-size: 1rem;
+    }
+  }
 
 #restart-btn:hover {
     background-color: #ffc9be;
