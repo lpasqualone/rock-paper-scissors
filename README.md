@@ -28,8 +28,3 @@ Create a JavaScript program from scratch; a **Rock Paper Scissors** game using H
 * Problem solving - identifying the problem and thinking through a solution 
 * Writing git commmit messages
 * Writing Markdown format
-### What could be improved
-
-## Author
-👤 **lpasqualone**
-* GitHub: [lpasqualone](https://github.com/lpasqualone)
